@@ -1,0 +1,132 @@
+.Header {
+  position: relative;
+  z-index: 99999;
+}
+.Header__bar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: calc(100% - 100px);
+  height: 100px;
+  padding: 0px 50px;
+  overflow: hidden;
+  background-color: #333;
+}
+.Header__bar-dupe {
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+.Header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  /* padding: 0px 25px; */
+}
+
+.Header__logo {
+  position: relative;
+  width: 175px;
+  height: 35px;
+  width: 196px;
+  height: 40px;
+  background-image: url('../../static/willsquad_logo_medium_dark_w_r.png');
+  background-image: url('../../static/willsquad_logo_medium_light.png');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.25));
+}
+
+.Header__nav {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+}
+.Header__nav > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0px 25px;
+}
+.Header__nav > ul > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  list-style-type: none;
+}
+.Header__nav > ul > li > a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0px 35px;
+  transition: color 0.25s ease-in-out 0s,
+    background-color 0.25s ease-in-out 0s;
+}
+.Header__nav > ul > li[data-selected="true"] > a {
+  color: rgb(255, 193, 7);
+  font-weight: 500;
+}
+.Header__nav > ul > li:not([data-selected="true"]):hover > a {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.Header__nav__text {
+  padding: 5px 0px;
+}
+.Header__nav > ul > li > a > .lines {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 2px;
+}
+.Header__nav > ul > li > a > .lines > .line {
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  border-radius: 1px;
+  background-color: #fff;
+  transition: opacity 0.25s ease-in-out 0s;
+}
+.Header__nav > ul > li[data-selected="true"] > a > .lines > .line {
+  width: 100%;
+  background-color: rgb(255, 193, 7);
+  transition: all 0.25s ease-in-out 0s;
+}
+.Header__nav > ul > li:not([data-selected="true"]):hover > a > .lines > .line:nth-child(2) {
+  width: 100%;
+  transition: all 0.25s ease-in-out 0s;
+}
+.Header__nav > ul > li:hover > a > .lines > .line:nth-child(1),
+.Header__nav > ul > li[data-selected="true"] > a > .lines > .line:nth-child(1),
+.Header__nav > ul > li:hover > a > .lines > .line:nth-child(3),
+.Header__nav > ul > li[data-selected="true"] > a > .lines > .line:nth-child(3) {
+  width: 50%;
+  opacity: 0;
+  transition: all 0.25s ease-in-out 0.1s;
+}
+.Header__nav > ul > li:hover > a > .lines > .line:nth-child(1),
+.Header__nav > ul > li[data-selected="true"] > a > .lines > .line:nth-child(1) {
+  margin-left: -150%;
+}
+.Header__nav > ul > li:hover > a > .lines > .line:nth-child(3),
+.Header__nav > ul > li[data-selected="true"] > a > .lines > .line:nth-child(3) {
+  margin-left: 150%;
+}
