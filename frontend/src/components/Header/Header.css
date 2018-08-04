@@ -22,7 +22,6 @@
   justify-content: space-between;
   align-items: center;
   height: 100px;
-  /* padding: 0px 25px; */
 }
 
 .Header__logo {
@@ -31,7 +30,7 @@
   height: 35px;
   width: 196px;
   height: 40px;
-  background-image: url('../../static/willsquad_logo_medium_dark_w_r.png');
+  /* background-image: url('../../static/willsquad_logo_medium_dark_w_r.png'); */
   background-image: url('../../static/willsquad_logo_medium_light.png');
   background-size: contain;
   background-position: center center;
@@ -49,7 +48,6 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  padding: 0px 25px;
 }
 .Header__nav > ul > li {
   display: flex;
