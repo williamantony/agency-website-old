@@ -1,11 +1,38 @@
-export const UPDATE_HISTORY = 'UPDATE_HISTORY';
+export const SET_NAVIGATION_VISIBILITY = 'SET_NAVIGATION_VISIBILITY';
 
-export const updateHistory = (history = {}) => {
+export const setNavigationVisibility = (isVisible = false) => {
+  return {
+    type: SET_NAVIGATION_VISIBILITY,
+    payload: {
+      isVisible,
+    },
+  };
+};
+
+
+
+export const SET_THEME_STYLE = 'SET_THEME_STYLE';
+
+export const setThemeStyle = (style) => {
+  return {
+    type: SET_THEME_STYLE,
+    payload: {
+      style,
+    },
+  };
+};
+
+
+
+export const SET_FORMDATA = 'SET_FORMDATA';
+
+export const setFormData = (form, data = {}) => {
 
   return {
-    type: UPDATE_HISTORY,
+    type: SET_FORMDATA,
     payload: {
-      _history: history,
+      form,
+      data,
     },
   };
 
