@@ -2,26 +2,50 @@
   position: relative;
   z-index: 99999;
 }
+
 .Header__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
   top: 0px;
   left: 0px;
-  width: calc(100% - 100px);
+  width: 100%;
   height: 100px;
-  padding: 0px 50px;
   overflow: hidden;
   background-color: #333;
+  transition: box-shadow 0.25s ease-in-out 0s;
+}
+.Header[data-theme="light"] .Header__bar {
+  background-color: #fff;
+}
+.Header[data-scrolled-down="false"] .Header__bar {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+}
+.Header[data-scrolled-down="true"] .Header__bar {
+  box-shadow: 0px -50px 250px 0px rgba(0, 0, 0, 0.5);
 }
 .Header__bar-dupe {
   position: relative;
   width: 100%;
   height: 100px;
 }
+
 .Header__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+  height: 100px;
+}
+.Header__content__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-basis: 100%;
+  max-width: 1500px;
   height: 100px;
+  margin-left: 75px;
 }
 
 .Header__logo {
@@ -30,11 +54,15 @@
   height: 35px;
   width: 196px;
   height: 40px;
-  /* background-image: url('../../static/willsquad_logo_medium_dark_w_r.png'); */
   background-image: url('../../static/willsquad_logo_medium_light.png');
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
+}
+.Header[data-theme="light"] .Header__logo {
+  background-image: url('../../static/willsquad_logo_medium_dark_w_r.png');
+}
+.Header:not([data-theme="light"]) .Header__logo {
   filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.25));
 }
 
@@ -67,7 +95,7 @@
   color: rgba(255, 255, 255, 0.75);
   font-size: 16px;
   font-family: 'Lato', sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 1px;
   word-spacing: 1px;
   text-transform: uppercase;
@@ -78,12 +106,24 @@
 }
 .Header__nav > ul > li[data-selected="true"] > a {
   color: rgb(255, 193, 7);
-  font-weight: 500;
 }
 .Header__nav > ul > li:not([data-selected="true"]):hover > a {
   color: rgba(255, 255, 255, 1);
   background-color: rgba(255, 255, 255, 0.05);
 }
+
+.Header[data-theme="light"] .Header__nav > ul > li > a {
+  color: rgba(0, 0, 0, 0.75);
+}
+.Header[data-theme="light"] .Header__nav > ul > li[data-selected="true"] > a {
+  color: #da3233;
+  background-color: rgba(0, 0, 0, 0.035);
+}
+.Header[data-theme="light"] .Header__nav > ul > li:not([data-selected="true"]):hover > a {
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
 .Header__nav__text {
   padding: 5px 0px;
 }
@@ -98,7 +138,7 @@
 .Header__nav > ul > li > a > .lines > .line {
   position: absolute;
   width: 0%;
-  height: 1px;
+  height: 2px;
   border-radius: 1px;
   background-color: #fff;
   transition: opacity 0.25s ease-in-out 0s;
@@ -127,4 +167,11 @@
 .Header__nav > ul > li:hover > a > .lines > .line:nth-child(3),
 .Header__nav > ul > li[data-selected="true"] > a > .lines > .line:nth-child(3) {
   margin-left: 150%;
+}
+
+.Header[data-theme="light"] .Header__nav > ul > li > a > .lines > .line {
+  background-color: rgba(0, 0, 0, 1);
+}
+.Header[data-theme="light"] .Header__nav > ul > li[data-selected="true"] > a > .lines > .line {
+  background-color: #da3233;
 }
