@@ -84,7 +84,10 @@ body {
 }
 
 section {
-  padding: 0px 75px;
+  position: relative;
+  padding-left: 100px;
+  padding-right: 100px;
+  z-index: 1;
 }
 
 h1.homepage-heading {
@@ -150,7 +153,8 @@ p {
   justify-content: center;
   align-items: center;
   min-height: 100px;
-  padding: 50px 0px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
 }
 
