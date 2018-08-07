@@ -1,0 +1,56 @@
+button.Button {
+  position: relative;
+  min-width: 175px;
+  min-height: 50px;
+  outline: 0px;
+  border: 0px;
+  border-radius: 3px;
+  padding: 0px 25px;
+  margin: 5px;
+  background-color: blue;
+  overflow: hidden;
+  cursor: pointer;
+}
+.Button__content {
+  position: relative;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #fff
+}
+
+.Button__circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.Button__circle > .circle {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+button.Button.Button--clicked .Button__circle > .circle {
+  animation-name: buttonCircle;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+}
+
+@keyframes buttonCircle {
+  from {
+    width: 0%;
+    height: 0%;
+    opacity: 0.5;
+  }
+  to {
+    width: 320px;
+    height: 320px;
+    opacity: 0;
+  }
+}
