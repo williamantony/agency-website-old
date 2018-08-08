@@ -9,15 +9,13 @@ class Landing extends Component {
       <div className="Landing">
         <div className="Landing__bg">
           <div className="Landing__bg__img Landing__bg__img--worldmap" />
+          {/* <div className="Landing__bg__img Landing__bg__img--mockup" /> */}
         </div>
         <section>
           <div className="Landing__Cover">
             <div className="wrapper max-width--1500px">
               <h1 className="homepage-heading">
-                Building Better Software,<br/>is our job.<br/>
-                <span className="h3__subheading">
-                  We take our jobs very seriously.
-                </span>
+                We develop strategies that work.
               </h1>
             </div>
           </div>

@@ -1,6 +1,5 @@
 .Landing {
   position: relative;
-  padding: 100px 0px 100px 0px;
   background-color: #ffffff;
 }
 .Landing__bg {
@@ -22,14 +21,20 @@
   background-repeat: no-repeat;
 }
 .Landing__bg > .Landing__bg__img--worldmap {
+  /* display: none; */
   background-image: url('./images/worldmap.png');
   background-size: 75% auto;
   opacity: 0.2;
+}
+.Landing__bg > .Landing__bg__img--mockup {
+  background-image: url('./images/Free-Web-Mockup-2.3a53c4b8\ copy.png');
+  background-size: cover;
+  /* opacity: 0.2; */
 }
 
 .Landing__Cover {
   display: flex;
   align-items: center;
-  padding: 50px 0px 50px 0px;
-  margin-top: -100px;
+  min-height: 300px;
+  text-align: center;
 }
