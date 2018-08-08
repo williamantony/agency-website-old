@@ -34,15 +34,13 @@ class MainServices extends Component {
         {
           this.state.services.map((service, index) => {
             return (
-              <div key={index} className="MainServices__item Animate-lines" data-id={service.id}>
-                <div className="lines lines-tl">
+              <div key={index} className="MainServices__item" data-id={service.id}>
+                {/* <div className="Animate-lines">
                   <div className="line" />
                   <div className="line" />
-                </div>
-                <div className="lines lines-br">
                   <div className="line" />
                   <div className="line" />
-                </div>
+                </div> */}
                 <div className="MainServices__item__content">
                   <div className="MainServices__item__icon" />
                   <div className="MainServices__item__text">
