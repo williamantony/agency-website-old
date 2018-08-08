@@ -18,7 +18,6 @@
 }
 .Header[data-theme="light"] .Header__bar {
   background-color: #fff;
-  background-color: rgba(0, 0, 0, 0.035);
 }
 .Header[data-scrolled-down="false"] .Header__bar {
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
@@ -86,6 +85,9 @@
   height: 100%;
   list-style-type: none;
 }
+.Header__nav > ul > li:not([data-selected="true"]):hover {
+  z-index: 1;
+}
 .Header__nav > ul > li > a {
   display: flex;
   flex-direction: column;
@@ -123,7 +125,7 @@
 }
 .Header[data-theme="light"] .Header__nav > ul > li:not([data-selected="true"]):hover > a {
   color: rgba(0, 0, 0, 1);
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.025);
 }
 
 .Header__nav__text {
