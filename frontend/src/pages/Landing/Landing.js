@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Landing.css';
+import Button from '../../components/Button/Button';
 import MainServices from '../../components/MainServices/MainServices';
 
 class Landing extends Component {
@@ -7,21 +8,22 @@ class Landing extends Component {
   render() {
     return (
       <div className="Landing">
-        <div className="Landing__bg">
-          <div className="Landing__bg__img Landing__bg__img--worldmap" />
-          {/* <div className="Landing__bg__img Landing__bg__img--mockup" /> */}
-        </div>
-        <section>
-          <div className="Landing__Cover">
-            <div className="wrapper max-width--1500px">
-              <h1 className="homepage-heading">
-                We develop strategies that work.
-              </h1>
+        <section className="Landing__cover">
+          <div className="wrapper max-width--1500px">
+            <div className="Landing__cover__image" />
+            <div className="Landing__cover__content">
+              <div className="Landing__cover__content__holder">
+                <h1 className="homepage-heading">
+                  We develop strategies 
+                  <br />that work.
+                </h1>
+                <button className="Landing__cover__button">Get Instant Quote</button>
+              </div>
             </div>
           </div>
         </section>
-        
-        <section>
+                
+        <section className="Landing__mainservices">
           <div className="wrapper max-width--1500px">
             <MainServices />
           </div>

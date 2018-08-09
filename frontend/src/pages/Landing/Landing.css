@@ -2,9 +2,26 @@
   position: relative;
   background-color: #ffffff;
 }
-.Landing__bg {
+.Landing__cover {
+  position: relative;
+  height: 100vh;
+  min-height: 500px;
+  max-height: 680px;
+}
+.Landing__cover__image {
+  position: absolute;
+  top: 0px;
+  left: -100px;
+  width: 100%;
+  height: 100%;
+  background-image: url('./images/Free-Web-Mockup-2.3a53c4b8\ copy.png');
+  background-position: top center;
+  background-size: auto 90%;
+  background-repeat: no-repeat;
+}
+.Landing__cover__content {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   position: absolute;
   top: 0px;
@@ -12,7 +29,64 @@
   width: 100%;
   height: 100%;
 }
-.Landing__bg > .Landing__bg__img {
+.Landing__cover__content__holder {
+  width: 50%;
+  flex-basis: 50%;
+  margin-top: -100px;
+}
+button.Landing__cover__button {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  font-size: 22px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  padding: 15px 25px;
+  margin-top: 40px;
+  outline: 0px;
+  border: 0px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: color 0.1s linear 0s,
+    top 0.1s linear 0s,
+    left 0.1s linear 0s,
+    box-shadow 0.1s linear 0s,
+    background-color 0.1s linear 0s;
+}
+button.Landing__cover__button {
+  color: #ffffff;;
+  box-shadow: 1px 1px 0px 0px rgba(255, 255, 255, 1),
+    0px 6px 1px -3px rgba(0, 0, 0, 0.15);
+  background-color: #d93636;
+}
+button.Landing__cover__button:hover {
+  background-color: #bd2626;
+}
+button.Landing__cover__button:active {
+  top: 2px;
+  color: #ffffff;
+  box-shadow: 1px 1px 0px 0px rgba(255, 255, 255, 1),
+    0px 0px 0px 0px rgba(0, 0, 0, 0.15);
+  background-color: #444444;
+}
+
+.Landing__mainservices {
+  padding-top: 75px;
+  padding-bottom: 75px;
+  background-color: rgba(0, 0, 0, 0.025);
+}
+
+/* 
+.Landing__bg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+.Landing__bg__img {
   position: relative;
   width: 100%;
   max-width: 1750px;
@@ -20,21 +94,52 @@
   background-position: center center;
   background-repeat: no-repeat;
 }
-.Landing__bg > .Landing__bg__img--worldmap {
-  /* display: none; */
+.Landing__bg__img--worldmap {
   background-image: url('./images/worldmap.png');
   background-size: 75% auto;
   opacity: 0.2;
 }
-.Landing__bg > .Landing__bg__img--mockup {
+.Landing__bg__img--mockup {
   background-image: url('./images/Free-Web-Mockup-2.3a53c4b8\ copy.png');
   background-size: cover;
-  /* opacity: 0.2; */
 }
+.gradient-bg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); 
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); 
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); 
+}
+.Landing__bg__circle {
+  position: absolute;
+  top: -1250px;
+  right: -1000px;
+  width: 2000px;
+  height: 2000px;
+  border-radius: 50%;
+}
+
 
 .Landing__Cover {
   display: flex;
   align-items: center;
   min-height: 300px;
-  text-align: center;
 }
+.Landing__Cover__buttons {
+  margin-top: 35px;
+}
+.Landing__Cover__button {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 15px 25px;
+  box-shadow: inset 0px 0px 0px 2px rgba(0, 0, 0, 1);
+  background-color: transparent;
+} */
