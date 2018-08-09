@@ -92,21 +92,10 @@ section {
 
 h1.homepage-heading {
   color: #111;
-  font-size: 56px;
+  font-size: 48px;
   font-family: 'Noto Serif', serif;
   font-weight: 700;
   line-height: 60px;
-  /* text-shadow: 
-    1px 1px 2px rgba(0, 0, 0, 0.015),
-    2px 2px 2px rgba(0, 0, 0, 0.015),
-    3px 3px 2px rgba(0, 0, 0, 0.015),
-    4px 4px 0px rgba(0, 0, 0, 0.015),
-    5px 5px 0px rgba(0, 0, 0, 0.015),
-    6px 6px 0px rgba(0, 0, 0, 0.015),
-    7px 7px 0px rgba(0, 0, 0, 0.015),
-    8px 8px 0px rgba(0, 0, 0, 0.015),
-    9px 9px 0px rgba(0, 0, 0, 0.015),
-    10px 10px 0px rgba(0, 0, 0, 0.015); */
 }
 h1.page-heading__title {
   color: #111111;
@@ -114,17 +103,6 @@ h1.page-heading__title {
   font-family: 'Noto Serif', serif;
   font-weight: 700;
   line-height: 72px;
-  /* text-shadow: 
-    1px 1px 2px rgba(0, 0, 0, 0.015),
-    2px 2px 2px rgba(0, 0, 0, 0.015),
-    3px 3px 2px rgba(0, 0, 0, 0.015),
-    4px 4px 0px rgba(0, 0, 0, 0.015),
-    5px 5px 0px rgba(0, 0, 0, 0.015),
-    6px 6px 0px rgba(0, 0, 0, 0.015),
-    7px 7px 0px rgba(0, 0, 0, 0.015),
-    8px 8px 0px rgba(0, 0, 0, 0.015),
-    9px 9px 0px rgba(0, 0, 0, 0.015),
-    10px 10px 0px rgba(0, 0, 0, 0.015); */
 }
 
 h2 {

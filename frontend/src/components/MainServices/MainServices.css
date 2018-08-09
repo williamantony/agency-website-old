@@ -16,8 +16,8 @@
     background-color 0.25s ease-in-out 0s;
 }
 .MainServices__item:hover {
-  box-shadow: 0px 0px 0px 30px #efebe9;
-  background-color: #efebe9;
+  box-shadow: 0px 0px 0px 30px #f3f3f3;
+  background-color: #f3f3f3;
   transition: box-shadow 0.25s ease-in-out 0s,
     background-color 0.25s ease-in-out 0s;
 }
