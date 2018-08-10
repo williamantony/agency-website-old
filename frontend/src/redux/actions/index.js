@@ -23,17 +23,29 @@ export const setThemeStyle = (style) => {
 };
 
 
+/**
+ * Form Input
+ */
+export const CREATE_FORM = 'CREATE_FORM';
 
-export const SET_FORMDATA = 'SET_FORMDATA';
-
-export const setFormData = (form, data = {}) => {
-
+export const createForm = (form) => {
   return {
-    type: SET_FORMDATA,
+    type: CREATE_FORM,
     payload: {
       form,
-      data,
     },
   };
+};
 
+export const SET_INPUT = 'SET_INPUT';
+
+export const setInput = (form, name, value) => {
+  return {
+    type: SET_INPUT,
+    payload: {
+      form,
+      name,
+      value,
+    },
+  };
 };
