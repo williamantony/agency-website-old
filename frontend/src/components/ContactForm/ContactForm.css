@@ -1,0 +1,10 @@
+.ContactForm {
+  max-width: 640px;
+}
+.ContactForm > form {
+  margin: 35px 0px;
+}
+.ContactForm__row {
+  display: flex;
+  margin: 0px -10px;
+}
