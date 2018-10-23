@@ -1,63 +1,44 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './MainServices.css';
+import MainServicesItem from './components/MainServicesItem/MainServicesItem';
 
-class MainServices extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      services: [
-        {
-          id: 'websites',
-          name: 'Websites',
-          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '+
-            'Lorem Ipsum has been the industry\'s standard dummy text ever.',
-        },
-        {
-          id: 'apps',
-          name: 'Applications',
-          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '+
-            'Lorem Ipsum has been the industry\'s standard dummy text ever.',
-        },
-        {
-          id: 'branding',
-          name: 'Branding',
-          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '+
-            'Lorem Ipsum has been the industry\'s standard dummy text ever.',
-        },
-      ]
-    };
-  }
+const MainServices = (props) => {
+  const services = [
+    {
+      id: 'websites',
+      name: 'Websites',
+      description: 'We create user friendly, secure & high performance websites '+
+        'using the latest in web technologies to help you succeed.',
+    },
+    {
+      id: 'apps',
+      name: 'Applications',
+      description: 'We develop cross-platform applications that are optimized for user interactions '+
+        'to reduce the gap between you and your audience',
+    },
+    {
+      id: 'branding',
+      name: 'Branding',
+      description: 'We apply branding strategies to improve your sales and create a long lasting impression '+
+        'in the minds of your target audience. ',
+    },
+  ];
 
-  render() {
-    return (
-      <div className="MainServices">
-        {
-          this.state.services.map((service, index) => {
-            return (
-              <div key={index} className="MainServices__item" data-id={service.id}>
-                {/* <div className="Animate-lines">
-                  <div className="line" />
-                  <div className="line" />
-                  <div className="line" />
-                  <div className="line" />
-                </div> */}
-                <div className="MainServices__item__content">
-                  <div className="MainServices__item__icon" />
-                  <div className="MainServices__item__text">
-                    <div className="MainServices__item__name">{service.name}</div>
-                    <div className="MainServices__item__description">{service.description}</div>
-                  </div>
-                  {/* <div className="MainServices__item__button">Learn More &raquo;</div> */}
-                </div>
-              </div>
-            )
-          })
-        }
-        
-      </div>
-    );
-  }
-
-}
+  return (
+    <div className="MainServices">
+      {
+        services.map((service, index) => (
+          <MainServicesItem
+            key={index}
+            id={service.id}
+            name={service.name}
+            description={service.description}
+          />
+        ))
+      }
+      
+    </div>
+  );
+};
 
 export default MainServices;
