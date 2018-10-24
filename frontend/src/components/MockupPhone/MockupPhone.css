@@ -1,0 +1,134 @@
+.MockupPhoneContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 1000px;
+  background-color: #dddddd;
+}
+
+.MockupPhone {
+  position: relative;
+  border-radius: 35px;
+  box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.15),
+    0px 5px 2px -2px rgba(0, 0, 0, 0.15);
+}
+
+.MockupPhone__body {
+  width: 375px;
+  height: 680px;
+  border-radius: 2px 2px 5px 5px;
+  margin: 1px;
+  border-radius: 35px;
+  background-color: #fff;
+}
+
+.MockupPhone__frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
+}
+.MockupPhone__frame__top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 45%;
+  height: 30px;
+  border-radius: 0px 0px 25px 25px;
+  background-color: rgba(0, 0, 0, 0.15);
+  margin: 0px auto;
+  opacity: 0.5;
+}
+.MockupPhone__frame__top > .speaker {
+  width: 25%;
+  height: 5px;
+  border-radius: 2.5px;
+  background-color: #000000;
+  margin-left: 20px;
+  opacity: 0.5;
+}
+.MockupPhone__frame__top > .camera {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #000000;
+  margin-left: 10px;
+  opacity: 0.5;
+}
+.MockupPhone__frame__top > .camera > .lens {
+  width: 2px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #fff;
+  opacity: 0.5;
+}
+
+.MockupPhone__frame__bottom {
+  position: relative;
+  width: 35%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #000000;
+  margin: 30px auto;
+  opacity: 0.25;
+}
+
+.MockupPhone__frame__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+.MockupPhone__frame__buttons__left {
+  position: relative;
+  left: -2px;
+  width: 3px;
+  height: 100%;
+}
+.MockupPhone__frame__buttons__left > .button {
+  width: 5px;
+  border-radius: 15px 0px 0px 15px;
+  background-color: #fff;
+  box-shadow: -2px 0px 3px -2px rgba(0, 0, 0, 0.15);
+}
+.MockupPhone__frame__buttons__left > .button:nth-child(1) {
+  height: 35px;
+  margin-top: 50px;
+}
+.MockupPhone__frame__buttons__left > .button:nth-child(2) {
+  height: 65px;
+  margin-top: 30px;
+}
+.MockupPhone__frame__buttons__left > .button:nth-child(3) {
+  height: 65px;
+  margin-top: 15px;
+}
+
+.MockupPhone__frame__buttons__right {
+  position: relative;
+  right: -2px;
+  width: 3px;
+  height: 100%;
+}
+.MockupPhone__frame__buttons__right > .button {
+  position: relative;
+  right: 2px;
+  width: 5px;
+  height: 75px;
+  border-radius: 0px 15px 15px 0px;
+  background-color: #fff;
+  box-shadow: 3px 0px 3px -2px rgba(0, 0, 0, 0.15);
+  margin-top: 150px;
+}
