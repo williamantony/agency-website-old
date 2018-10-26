@@ -1,0 +1,42 @@
+.Pricing {
+  padding: 50px 0px;
+}
+
+.Pricing__icon {
+  width: 85px;
+  height: 85px;
+  background-image: url('./images/money-icon.png');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 0px auto 50px auto;
+  opacity: 0.35;
+}
+.Pricing__text {
+
+}
+
+.Pricing__title {
+  color: rgba(0, 0, 0, 1);
+  font-size: 28px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 36px;
+  letter-spacing: 3px;
+  word-spacing: 5px;
+  margin: 0px 0px 25px 0px;
+}
+.Pricing__subtitle {
+  max-width: 680px;
+  color: rgba(0, 0, 0, 1);
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  line-height: 28px;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  margin: 0px auto 75px auto;
+}
