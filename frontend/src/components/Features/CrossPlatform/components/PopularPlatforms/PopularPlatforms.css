@@ -1,0 +1,14 @@
+.PopularPlatforms {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@media only screen and (max-width: 480px) {
+  .PopularPlatforms {
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-right: 25px;
+  }
+}
