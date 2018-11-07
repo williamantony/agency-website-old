@@ -1,0 +1,10 @@
+.ServiceOptions {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.ServiceOptions__item {
+  flex-basis: calc((100% / 3) - 25px);
+  height: 300px;
+  background-color: #ddd;
+}
