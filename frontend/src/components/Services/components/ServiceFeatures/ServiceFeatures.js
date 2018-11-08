@@ -3,7 +3,7 @@ import './ServiceFeatures.css';
 
 const ServiceFeatures = (props) => {
   return (
-    <div className="ServiceFeatures">
+    <div className="ServiceFeatures" data-image-align={props.align || 'left'}>
       <div className="ServiceFeatures__image" />
       <div className="ServiceFeatures__content">
         { 
