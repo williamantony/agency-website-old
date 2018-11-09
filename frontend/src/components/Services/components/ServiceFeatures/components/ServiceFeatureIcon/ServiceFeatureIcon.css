@@ -1,0 +1,41 @@
+.ServiceFeatureIcon {
+  position: relative;
+  width: 75px;
+  height: 75px;
+  margin-bottom: 15px;
+  background-color: #dddddd;
+}
+.ServiceFeatureIcon__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.ServiceFeatureIcon__image[data-name="responsivedesign"] {
+  background-image: url('./images/responsive-design-icon.png');
+}
+.ServiceFeatureIcon__image[data-name="searchoptimized"] {
+  background-image: url('./images/seo-icon.png');
+}
+.ServiceFeatureIcon__image[data-name="speedoptimized"] {
+  background-image: url('./images/speed-icon.png');
+}
+.ServiceFeatureIcon__image[data-name="securewebsite"] {
+  background-image: url('./images/shield-icon.png');
+}
+
+.ServiceFeatureIcon__image[data-name="freshdesign"] {
+  background-image: url('./images/fresh-design-icon.png');
+}
+.ServiceFeatureIcon__image[data-name="offlinesupport"] {
+  background-image: url('./images/offline-icon.png');
+}
+.ServiceFeatureIcon__image[data-name="crossplatform"] {
+  background-image: url('./images/cross-platform-icon.png');
+}
+.ServiceFeatureIcon__image[data-name="customfeatures"] {
+  background-image: url('./images/custom-feature-icon.png');
+}
