@@ -22,6 +22,12 @@ const MainServices = (props) => {
       description: 'We apply branding strategies to improve your sales and create a long lasting impression '+
         'in the minds of your target audience. ',
     },
+    {
+      id: 'marketing',
+      name: 'Marketing',
+      description: 'We apply branding strategies to improve your sales and create a long lasting impression '+
+        'in the minds of your target audience. ',
+    },
   ];
 
   return (
