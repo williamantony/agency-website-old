@@ -3,7 +3,6 @@
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin-bottom: 100px;
 }
 .ServiceCategories__item {
   display: flex;
@@ -14,25 +13,36 @@
   position: relative;
   margin: 0px 18px 36px 18px;
   overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 0px 50px -15px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
 }
 .ServiceCategories__item__title {
   position: relative;
-  color: #555555;
-  font-size: 20px;
-  font-family: 'Lato', sans-serif;
+  color: #AD1457;
+  font-size: 24px;
+  font-family: 'Marcellus', serif;
   font-weight: 400;
   line-height: 36px;
   letter-spacing: 0.25px;
   word-spacing: 0.25px;
-  margin-top: 5px;
+}
+.ServiceCategories__item__description {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  word-spacing: 0.25px;
+  margin: 10px 35px 35px 35px;
 }
 
 .ServiceCategories__item__icon {
   position: relative;
-  width: 100%;
-  height: 175px;
-  border-radius: 10px;
-  background-color: #f0f0f0;
+  width: 75px;
+  height: 75px;
+  margin: 50px 25px 25px 25px;
 }
 .ServiceCategories__item__icon__image {
   position: absolute;
@@ -64,5 +74,30 @@
 }
 .ServiceCategories__item__icon__image[data-name="printdesign"] {
   background-image: url('./images/print-design-icon.png');
+  opacity: 0.75;
+}
+
+.ServiceCategories__item__icon__image[data-name="searchoptimization"] {
+  background-image: url('./images/seo.png');
+  opacity: 0.75;
+}
+.ServiceCategories__item__icon__image[data-name="searchmarketing"] {
+  background-image: url('./images/search-engine-marketing-icon.png');
+  opacity: 0.75;
+}
+.ServiceCategories__item__icon__image[data-name="locallistings"] {
+  background-image: url('./images/local-listings-icon.png');
+  opacity: 0.75;
+}
+.ServiceCategories__item__icon__image[data-name="socialmediamarketing"] {
+  background-image: url('./images/socialmedia-marketing-icon.png');
+  opacity: 0.75;
+}
+.ServiceCategories__item__icon__image[data-name="socialmediamanagement"] {
+  background-image: url('./images/socialnetwork-icon.png');
+  opacity: 0.75;
+}
+.ServiceCategories__item__icon__image[data-name="designformarketing"] {
+  background-image: url('./images/designformarketing-icon.png');
   opacity: 0.75;
 }

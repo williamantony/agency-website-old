@@ -13,6 +13,9 @@ const ServiceCategories = (props) => {
               <div className="ServiceCategories__item__icon__image" data-name={ category.name } />
             </div>
             <div className="ServiceCategories__item__title">{ category.title }</div>
+            <div className="ServiceCategories__item__description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
           </div>
         ))
       }

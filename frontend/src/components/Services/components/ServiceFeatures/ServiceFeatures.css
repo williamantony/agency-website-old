@@ -2,21 +2,29 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 75px 0px 150px 0px;
 }
 .ServiceFeatures[data-image-align="right"] {
   flex-direction: row-reverse;
 }
 .ServiceFeatures__image {
   flex-basis: calc(50% - 50px);
+  flex-basis: 50%;
   position: relative;
   width: 100%;
   height: 640px;
-  border-radius: 10px;
+  border-radius: 25px;
   background-color: #888;
   background-image: url("https://images.pexels.com/photos/374016/pexels-photo-374016.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   background-position: center center;
   background-size: cover;
+}
+.ServiceFeatures[data-image-align="left"] .ServiceFeatures__image {
+  margin-right: 25px;
+  margin-left: -125px;
+}
+.ServiceFeatures[data-image-align="right"] .ServiceFeatures__image {
+  margin-left: 25px;
+  margin-right: -125px;
 }
 .ServiceFeatures__content {
   display: flex;
@@ -25,7 +33,7 @@
   flex-basis: 50%;
   position: relative;
   width: 100%;
-  min-height: 500px;
+  /* min-height: 500px; */
   background-color: transparent;
 }
 
@@ -33,30 +41,24 @@
 
 }
 .ServiceFeatures__feature {
-  flex-basis: calc(50% - 60px);
+  flex-basis: calc(50% - 50px);
   padding: 25px;
 }
 
-.ServiceFeatures__feature__icon {
-  width: 75px;
-  height: 75px;
-  margin-bottom: 15px;
-  background-color: #dddddd;
-}
 .ServiceFeatures__feature__title {
-  color: #bf261b;
-  font-size: 20px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 500;
+  color: #AD1457;
+  font-size: 22px;
+  font-family: 'Marcellus', serif;
+  font-weight: 400;
   letter-spacing: 0.25px;
   word-spacing: 0.25px;
   margin-bottom: 10px;
 }
 .ServiceFeatures__feature__description {
-  font-size: 16px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  line-height: 22px;
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 24px;
   letter-spacing: 0.5px;
   word-spacing: 0.25px;
 }

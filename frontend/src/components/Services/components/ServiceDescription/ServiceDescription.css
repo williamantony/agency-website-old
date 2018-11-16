@@ -2,14 +2,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 75px;
 }
 .ServiceDescription__text {
   max-width: 680px;
   color: rgba(0, 0, 0, 1);
-  font-size: 20px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  line-height: 28px;
-  letter-spacing: 1px;
-  word-spacing: 1px;
+  font-size: 22px;
+  font-family: 'Marcellus', serif;
+  font-weight: 400;
+  text-align: center;
+  line-height: 32px;
+  letter-spacing: 0.5px;
+  word-spacing: 0.5px;
 }
