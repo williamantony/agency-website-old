@@ -1,60 +1,41 @@
 .CrossBrowser {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 50px 0px;
 }
-.CrossBrowser__title {
-  color: rgba(0, 0, 0, 1);
-  font-size: 28px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
-  line-height: 36px;
-  letter-spacing: 3px;
-  word-spacing: 5px;
-  margin: 0px 0px 25px 0px;
+.CrossBrowser__bg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#555555+0,000000+100&1+0,0+100 */
+  background: -moz-radial-gradient(center, ellipse cover, rgba(85,85,85,1) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(85,85,85,1) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, rgba(85,85,85,1) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#555555', endColorstr='#00000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  opacity: 0.25;
 }
-.CrossBrowser__subtitle {
-  max-width: 480px;
-  color: rgba(0, 0, 0, 1);
-  font-size: 20px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  line-height: 28px;
-  letter-spacing: 1px;
-  word-spacing: 1px;
-  margin: 0px auto 50px auto;
+.CrossBrowser__content {
+  position: relative;
+  flex-basis: 50%;
+  margin-left: 250px;
 }
-
-.CrossBrowser__browsers {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.CrossBrowser__browsers__item {
-  width: 50px;
-  height: 50px;
+.CrossBrowser__bgimage {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-image: url('./images/browsers.png');
   background-size: contain;
-  background-position: center center;
+  background-position: left center;
   background-repeat: no-repeat;
+}
+.CrossBrowser__image > img {
+  width: 100%;
+}
 
-}
-.CrossBrowser__browsers__item:not(:first-child) {
-  margin-left: 20px;
-}
-.CrossBrowser__browsers__item[data-browser="chrome"] {
-  background-image: url('../../../static/third-party-logos/browsers/chrome-logo.png');
-}
-.CrossBrowser__browsers__item[data-browser="firefox"] {
-  background-image: url('../../../static/third-party-logos/browsers/firefox-logo.png');
-}
-.CrossBrowser__browsers__item[data-browser="safari"] {
-  background-image: url('../../../static/third-party-logos/browsers/safari-logo.png');
-}
-.CrossBrowser__browsers__item[data-browser="edge"] {
-  background-image: url('../../../static/third-party-logos/browsers/edge-logo.png');
-}
-.CrossBrowser__browsers__item[data-browser="opera"] {
-  background-image: url('../../../static/third-party-logos/browsers/opera-logo.png');
+@media only screen and (max-width: 1200px) {
+
+
+
 }
