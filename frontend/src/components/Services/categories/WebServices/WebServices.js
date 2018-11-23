@@ -9,47 +9,51 @@ class WebServices extends Component {
 
   render() {
 
-    const services = [
+    const serviceTypes = [
       {
-        title: '',
+        name: 'ecommerce',
+        title: 'E-Commerce',
         description: '',
       },
       {
-        title: '',
+        name: 'business',
+        title: 'Business',
         description: '',
       },
       {
-        title: '',
+        name: 'professionals',
+        title: 'Professionals',
         description: '',
       },
       {
-        title: '',
+        name: 'service_provider',
+        title: 'Service Providers',
         description: '',
       },
       {
-        title: '',
+        name: 'startup',
+        title: 'Start-Up',
         description: '',
       },
       {
-        title: '',
+        name: 'personal',
+        title: 'Personal',
         description: '',
       },
       {
-        title: '',
+        name: 'portfolio',
+        title: 'Portfolio',
         description: '',
       },
       {
-        title: '',
-        description: '',
-      },
-      {
-        title: '',
+        name: 'online_profile',
+        title: 'Online Profile',
         description: '',
       },
     ];
     
-    const slides = services.map((service, index) => (
-      <ServiceItem />
+    const slides = serviceTypes.map((service, index) => (
+      <ServiceItem {...service} />
     ));
 
     return (
