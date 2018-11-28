@@ -1,80 +1,79 @@
 .Input {
-  display: flex;
-  flex-basis: 100%;
   position: relative;
-  margin: 15px 10px;
-  cursor: text;
-  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
-  background-color: transparent;
-  transition: box-shadow 0.25s ease-in-out 0s,
-    background-color 0.25s ease-in-out 0s,
-    padding 0.25s ease-in-out 0s;
+  flex-basis: 100%;
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  padding: 0px 25px;
+  margin: 0px;
+  border-radius: 3px;
+  border: 0px;
+  outline: 0px;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
+    inset 0px 3px 1px -1px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  overflow: hidden;
 }
 .Input[data-focused="true"] {
-  box-shadow: inset 0px 0px 0px 2px #ffc107;
-  box-shadow: inset 0px 0px 0px 2px #2196F3;
-  background-color: #ffffff;
+  box-shadow: 0px 0px 0px 2px dodgerblue,
+    inset 0px 3px 1px -1px rgba(0, 0, 0, 0.1);
 }
 
 .Input__placeholder {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   position: absolute;
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 0px;
-  transition: height 0.25s ease-in-out 0s;
+  height: 100%;
 }
-.Input__placeholder > .text {
-  font-size: 15px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.5px;
-  padding: 0px 13px;
-  margin-left: 2px;
-  opacity: 1;
-  background-color: #ffffff;
-  transition: opacity 0.25s ease-in-out 0s,
-    font 0.25s ease-in-out 0s,
-    background-color 0.25s ease-in-out 0s,
-    padding 0.25s ease-in-out 0s,
-    margin 0.25s ease-in-out 0s;
+.Input[data-type="textarea"] .Input__placeholder {
+  align-items: flex-start;
 }
+.Input__placeholder__text {
+  position: relative;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  padding: 0px 0px 0px 25px;
+  margin-top: 0px;
+  transition: color 0.15s ease-in-out 0s,
+    font-size 0.15s ease-in-out 0s,
+    margin-top 0.15s ease-in-out 0s;
+}
+.Input[data-type="textarea"] .Input__placeholder__text {
+  padding: 25px 0px 0px 25px;
+}
+.Input[data-focused="true"] .Input__placeholder__text,
+.Input[data-filled="true"] .Input__placeholder__text {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+  margin-top: -25px;
+}
+.Input[data-type="textarea"][data-focused="true"] .Input__placeholder__text,
+.Input[data-type="textarea"][data-filled="true"] .Input__placeholder__text {
+  margin-top: -12px;
+}
+
 
 .Input__input {
   display: flex;
-  align-items: center;
+  position: relative;
+  margin: 0px -25px;
+}
+.Input__input__tag {
   flex-basis: 100%;
-  position: relative;
-}
-.Input__input > input[type="text"],
-.Input__input > input[type="tel"],
-.Input__input > input[type="email"],
-.Input__input > textarea {
-  position: relative;
-  width: calc(100% - 30px);
   font-size: 20px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.75px;
-  padding: 20px 15px 12px 15px;
-  outline: 0px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
   border: 0px;
-  border-radius: 3px;
+  padding: 30px 25px 10px 25px;
   background-color: transparent;
-  opacity: 0.65;
-  transition: opacity 0.15s ease-in-out 0s;
 }
-.Input__input > textarea {
+.Input__input__tag--textarea {
   min-height: 100px;
   resize: vertical;
-}
-.Input[data-filled="true"] .Input__input > input[type="text"],
-.Input[data-filled="true"] .Input__input > input[type="tel"],
-.Input[data-filled="true"] .Input__input > input[type="email"],
-.Input[data-filled="true"] .Input__input > textarea {
-  opacity: 1.0;
-  font-weight: 400;
 }

@@ -1,137 +1,110 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { setInput } from '../../redux/actions'; 
 import './Input.css';
 
 class Input extends Component {
   constructor(props) {
     super(props);
-    this.inputRef = React.createRef();
     this.state = {
-      form: props.form,
-      name: props.name,
-      type: props.type,
-      label: props.label,
-      placeholder: props.placeholder,
       value: '',
-      status: {
-        isFocused: false,
-        isFilled: false,
-      }
+      isFocused: false,
+      isFilled: false,
     };
   }
 
-  componentWillReceiveProps(props) {
-    const {
-      form,
-      name,
-    } = this.state;
-    const value = props.formData[form][name] || '';
-
+  handleChange = (event) => {
+    event.preventDefault();
+    const { value } = event.target;
     this.setState({
       value,
-      status: {
-        ...this.state.status,
-        isFilled: value !== '',
-      },
+      isFilled: value !== '',
     });
   }
 
-  handleInput = (event) => {
-    event.preventDefault();
+  handleFocus = () => {
+    this.setState({
+      isFocused: true,
+    });
+  }
+
+  handleBlur = () => {
+    this.setState({
+      isFocused: false,
+    });
+  }
+
+  renderInput = () => {
+    const { value } = this.state;
     const {
-      form,
       name,
-    } = this.state;
-    const { value } = event.target;
-    
-    this.props.setInput(form, name, value);
-  }
+      type,
+    } = this.props;
 
-  handleFocus = (event) => {
-    event.preventDefault();
-    this.setState({
-      status: {
-        ...this.state.status,
-        isFocused: true,
-      },
-    });
-  }
+    const allowedTypes = [
+      'text',
+      'number',
+      'password',
+      'email',
+      'tel',
+    ];
 
-  handleBlur = (event) => {
-    event.preventDefault();
-    this.setState({
-      status: {
-        ...this.state.status,
-        isFocused: false,
-      },
-    });
-  }
+    if (!allowedTypes.includes(type)) {
+      return null;
+    }
 
-  focusInput = (event) => {
-    this.inputRef.current.focus();
+    const input_tag = (
+      <input
+        className="Input__input__tag"
+        type={type}
+        name={name}
+        value={value}
+        onChange={this.handleChange}
+        onFocus={this.handleFocus}
+        onBlur={this.handleBlur}
+      />
+    );
+
+    const textarea_tag = (
+      <textarea
+        className="Input__input__tag"
+        name={name}
+        value={value}
+        onChange={this.handleChange}
+        onFocus={this.handleFocus}
+        onBlur={this.handleBlur}
+      />
+    );
+
+    return (this.props.type === 'textarea') ? textarea_tag : input_tag;
   }
 
   render() {
+    const {
+      isFocused,
+      isFilled,
+    } = this.state;
+
+    const {
+      type,
+      placeholder,
+    } = this.props;
+
     return (
       <div
         className="Input"
-        data-focused={this.state.status.isFocused}
-        data-filled={this.state.status.isFilled}
+        data-focused={isFocused}
+        data-filled={isFilled}
+        data-type={type}
       >
         <div className="Input__placeholder">
-          <div className="text">{ this.state.label }</div>
+          <div className="Input__placeholder__text">{ placeholder }</div>
         </div>
-        <div className="Input__input" onClick={this.focusInput}>
-          {
-            (() => {
-              switch(this.state.type) {
-                case 'textarea':
-                  return (
-                    <textarea
-                      type={this.state.type}
-                      ref={this.inputRef}
-                      name={this.state.name}
-                      placeholder={this.state.placeholder}
-                      value={this.state.value}
-                      onChange={this.handleInput}
-                      onFocus={this.handleFocus}
-                      onBlur={this.handleBlur}
-                    />
-                  );
-                
-                default:
-                  return (
-                    <input
-                      type={this.state.type}
-                      ref={this.inputRef}
-                      name={this.state.name}
-                      placeholder={this.state.placeholder}
-                      value={this.state.value}
-                      onChange={this.handleInput}
-                      onFocus={this.handleFocus}
-                      onBlur={this.handleBlur}
-                    />
-                  );
-              }
-            })()
-          }
+        <div className="Input__input">
+          { this.renderInput() }
         </div>
-
       </div>
     );
   }
 
 }
 
-const mapStateToProps = (state) => {
-  return {
-    formData: state.formData,
-  };
-};
-
-const mapDispatchToProps = {
-  setInput,
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Input);
+export default Input;
