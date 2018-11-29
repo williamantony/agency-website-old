@@ -14,10 +14,11 @@
     inset 0px 3px 1px -1px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
   overflow: hidden;
+  transition: box-shadow 0.15s ease-in-out 0s;
 }
 .Input[data-focused="true"] {
   box-shadow: 0px 0px 0px 2px dodgerblue,
-    inset 0px 3px 1px -1px rgba(0, 0, 0, 0.1);
+    inset 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
 }
 
 .Input__placeholder {
@@ -50,8 +51,8 @@
 .Input[data-focused="true"] .Input__placeholder__text,
 .Input[data-filled="true"] .Input__placeholder__text {
   color: rgba(0, 0, 0, 0.65);
-  font-size: 14px;
-  margin-top: -25px;
+  font-size: 15px;
+  margin-top: -30px;
 }
 .Input[data-type="textarea"][data-focused="true"] .Input__placeholder__text,
 .Input[data-type="textarea"][data-filled="true"] .Input__placeholder__text {
@@ -70,10 +71,11 @@
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   border: 0px;
-  padding: 30px 25px 10px 25px;
+  outline: 0px;
+  padding: 35px 25px 10px 25px;
   background-color: transparent;
 }
-.Input__input__tag--textarea {
-  min-height: 100px;
+textarea.Input__input__tag {
+  min-height: 150px;
   resize: vertical;
 }

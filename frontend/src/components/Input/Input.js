@@ -5,7 +5,7 @@ class Input extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: '',
+      value: props.value || '',
       isFocused: false,
       isFilled: false,
     };
@@ -18,6 +18,9 @@ class Input extends Component {
       value,
       isFilled: value !== '',
     });
+    if (typeof this.props.onChange === 'function') {
+      this.props.onChange(value);
+    }
   }
 
   handleFocus = () => {
@@ -45,6 +48,7 @@ class Input extends Component {
       'password',
       'email',
       'tel',
+      'textarea',
     ];
 
     if (!allowedTypes.includes(type)) {
