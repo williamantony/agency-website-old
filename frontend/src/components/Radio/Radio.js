@@ -5,10 +5,16 @@ import RadioItem from './RadioItem/RadioItem';
 class Radio extends Component {
   constructor(props) {
     super(props);
+    this.name = props.name || '';
     this.options = props.options || [];
+    this.onChange = props.onChange;
     this.state = {
       value: '',
     };
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.state.value !== nextState.value;
   }
 
   toggleOption = (event, value) => {
@@ -16,6 +22,9 @@ class Radio extends Component {
     this.setState({
       value,
     });
+    if (typeof this.props.onChange === 'function') {
+      this.props.onChange(value);
+    }
   }
 
   render() {

@@ -9,14 +9,18 @@ class CheckBoxItem extends Component {
     };
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.state.isChecked !== nextState.isChecked;
+  }
+
   toggleCheckBox = (event) => {
     event.preventDefault();
-    this.setState({
-      isChecked: !this.state.isChecked,
-    });
+    const isChecked = !this.state.isChecked;
+
     if (typeof this.props.onChange === 'function') {
-      this.props.onChange(this.props.name);
+      this.props.onChange(this.props.name, isChecked);
     }
+    this.setState({ isChecked });
   }
 
   render() {
@@ -27,7 +31,6 @@ class CheckBoxItem extends Component {
         onClick={this.toggleCheckBox}
         tabIndex="0"
       >
-        <input type="hidden" name={this.props.name} value={this.props.value} />
         <div className="CheckBoxItem__box">
           <div className="CheckBoxItem__box__tick">
             <div className="CheckBoxItem__box__tick__line CheckBoxItem__box__tick__line--first" />

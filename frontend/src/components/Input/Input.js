@@ -11,16 +11,20 @@ class Input extends Component {
     };
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.state !== nextState;
+  }
+
   handleChange = (event) => {
     event.preventDefault();
     const { value } = event.target;
+    if (typeof this.props.onChange === 'function') {
+      this.props.onChange(value);
+    }
     this.setState({
       value,
       isFilled: value !== '',
     });
-    if (typeof this.props.onChange === 'function') {
-      this.props.onChange(value);
-    }
   }
 
   handleFocus = () => {
