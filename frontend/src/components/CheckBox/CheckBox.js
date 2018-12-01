@@ -7,15 +7,20 @@ class CheckBox extends Component {
     super(props);
     const defaultOption = {
       label: props.label || '',
-      name: props.name || '',
       value: props.value || '',
       isChecked: props.isChecked || false,
     };
     this.options = props.options || [defaultOption];
-    this.name = props.name || 'unnamed';
+    this.name = props.name || 'unnamed_checkbox';
     this.onChange = props.onChange;
     this.state = {
       values: {},
+    };
+  }
+
+  static getDerivedStateFromProps = (nextProps, nextState) => {
+    return {
+      values: nextProps.value,
     };
   }
 
@@ -42,11 +47,19 @@ class CheckBox extends Component {
           name={this.name}
           value={JSON.stringify(this.state.values)}
         />
-        {
-          this.options.map((option, index) => (
-            <CheckBoxItem key={index} {...option} onChange={this.handleChange} />
-          ))
-        }
+        <div className="CheckBox__content">
+          {
+            this.options.map((option, index) => {
+              return (
+              <CheckBoxItem
+                key={index}
+                {...option}
+                isChecked={this.state.values[option.value] || false}
+                onChange={this.handleChange}
+              />
+            )})
+          }
+        </div>
       </div>
     );
   }

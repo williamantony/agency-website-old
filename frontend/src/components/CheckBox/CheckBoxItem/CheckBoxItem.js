@@ -4,8 +4,16 @@ import './CheckBoxItem.css';
 class CheckBoxItem extends Component {
   constructor(props) {
     super(props);
+    this.value = props.value;
+    this.onChange = props.onChange;
     this.state = {
       isChecked: props.isChecked || false,
+    };
+  }
+
+  static getDerivedStateFromProps = (nextProps, nextState) => {
+    return {
+      isChecked: nextProps.isChecked,
     };
   }
 
@@ -17,8 +25,8 @@ class CheckBoxItem extends Component {
     event.preventDefault();
     const isChecked = !this.state.isChecked;
 
-    if (typeof this.props.onChange === 'function') {
-      this.props.onChange(this.props.name, isChecked);
+    if (typeof this.onChange === 'function') {
+      this.onChange(this.value, isChecked);
     }
     this.setState({ isChecked });
   }

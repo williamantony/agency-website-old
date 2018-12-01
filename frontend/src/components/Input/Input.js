@@ -9,11 +9,20 @@ class Input extends Component {
       isFocused: false,
       isFilled: false,
     };
+    console.log('render');
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    return this.state !== nextState;
+  static getDerivedStateFromProps = (nextProps, nextState) => {
+    return {
+      value: nextProps.value,
+      isFilled: nextProps.value !== '',
+    };
   }
+
+  // shouldComponentUpdate(nextProps, nextState) {
+
+  //   return this.state !== nextState;
+  // }
 
   handleChange = (event) => {
     event.preventDefault();
@@ -58,7 +67,7 @@ class Input extends Component {
     if (!allowedTypes.includes(type)) {
       return null;
     }
-
+// console.log(this.state.value);
     const input_tag = (
       <input
         className="Input__input__tag"
