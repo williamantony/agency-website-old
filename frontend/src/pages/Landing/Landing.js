@@ -1,35 +1,34 @@
 import React, { Component } from 'react';
 import './Landing.css';
-import Button from '../../components/Button/Button';
-import MainServices from '../../components/MainServices/MainServices';
+import Header from '../../components/fixed/Header/Header';
+import LandingCover from '../../components/fixed/LandingCover/LandingCover';
+import Section from '../../components/reusable/Section/Section';
+import Services from '../../components/fixed/Services/Services';
+import ConsumerTypes from '../../components/fixed/ConsumerTypes/ConsumerTypes';
+import ContactForm from '../../components/fixed/ContactMethods/ContactForm/ContactForm';
+import Page from '../../components/reusable/Page/Page';
 
 class Landing extends Component {
 
   render() {
     return (
-      <div className="Landing">
-        <section className="Landing__cover">
-          <div className="wrapper max-width--1500px">
-            <div className="Landing__cover__image" />
-            <div className="Landing__cover__content">
-              <div className="Landing__cover__content__holder">
-                <h1 className="homepage-heading">
-                  We develop strategies 
-                  <br />that work.
-                </h1>
-                <button className="Landing__cover__button">Get Instant Quote</button>
-              </div>
-            </div>
-          </div>
-        </section>
-                
-        <section className="Landing__mainservices">
-          <div className="wrapper max-width--1500px">
-            <MainServices />
-          </div>
-        </section>
+      <Page className="Landing">
+        <Header theme="clear" />
 
-      </div>
+        <LandingCover />
+
+        <Section bg="#f5f5f5" padding="100px 100px">
+          <Services />
+        </Section>
+
+        <Section bg="#fff" padding="100px 100px">
+          <ConsumerTypes />
+        </Section>
+
+        <Section bg="#eee">
+          <ContactForm />
+        </Section>
+      </Page>
     );
   }
 

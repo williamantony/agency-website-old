@@ -1,0 +1,103 @@
+.ServiceItem {
+  position: relative;
+  background-color: #efebe9;
+}
+.ServiceItem__gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+50,0.65+80 */
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.65) 80%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.65) 80%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.65) 80%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+  opacity: 0.95;
+}
+.ServiceItem__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: #795548;
+  opacity: 0.25;
+}
+
+.ServiceItem__content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  min-height: 200px;
+  padding: 50px 25px 35px 25px;
+}
+.ServiceItem__title {
+  color: #fff;
+  font-size: 28px;
+  font-family: 'Lato', serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5),
+    0px 0px 50px rgba(0, 0, 0, 0.5);
+}
+.ServiceItem__icon {
+  display: none;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 25px;
+  
+}
+
+.ServiceItem__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(0.5);
+}
+.ServiceItem__image[data-name="commercial"] {
+  background-image: url('https://images.pexels.com/photos/929245/pexels-photo-929245.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+}
+.ServiceItem__image[data-name="ecommerce"] {
+  background-image: url('https://images.pexels.com/photos/974911/pexels-photo-974911.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+}
+.ServiceItem__image[data-name="database"] {
+  background-image: url('https://images.pexels.com/photos/1516704/pexels-photo-1516704.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+}
+.ServiceItem__image[data-name="payment"] {
+  background-image: url('https://images.pexels.com/photos/34577/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+}
+.ServiceItem__image[data-name="wordpress"] {
+  background-image: url('https://images.pexels.com/photos/261662/pexels-photo-261662.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+}
+
+.ServiceItem__image[data-name="business"] {
+  background-image: url('https://images.pexels.com/photos/288477/pexels-photo-288477.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+}
+.ServiceItem__image[data-name="professionals"] {
+  background-image: url('https://images.pexels.com/photos/1266010/pexels-photo-1266010.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+}
+.ServiceItem__image[data-name="service_provider"] {
+  background-image: url('https://images.pexels.com/photos/756883/pexels-photo-756883.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+}
+.ServiceItem__image[data-name="startup"] {
+  background-image: url('https://images.pexels.com/photos/1059120/pexels-photo-1059120.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  /* background-image: url('https://images.pexels.com/photos/1368495/pexels-photo-1368495.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'); */
+}
+.ServiceItem__image[data-name="church"] {
+  background-image: url('https://images.pexels.com/photos/976866/pexels-photo-976866.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+}
+.ServiceItem__image[data-name="nonprofit"] {
+  background-image: url('https://images.pexels.com/photos/461049/pexels-photo-461049.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+}
+.ServiceItem__image[data-name="individuals"] {
+  background-image: url('https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+}

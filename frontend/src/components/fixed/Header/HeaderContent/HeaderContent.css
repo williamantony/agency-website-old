@@ -1,0 +1,203 @@
+.Header {
+  position: relative;
+  z-index: 99999;
+}
+
+.Header__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  background-color: #222222;
+  transition: box-shadow 0.25s ease-in-out 0s;
+}
+.Header[data-theme="light"] .Header__bar {
+  background-color: #fff;
+}
+.Header[data-theme="clear"] .Header__bar {
+  background-color: transparent;
+}
+.Header[data-scrolled-down="false"] .Header__bar {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+}
+.Header[data-scrolled-down="true"] .Header__bar {
+  box-shadow: 0px -50px 250px 0px rgba(0, 0, 0, 0.5);
+}
+.Header__bar-dupe {
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+
+.Header__gradient {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+50,0+100 */
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.65) 50%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+  opacity: 0;
+}
+.Header[data-theme="clear"] .Header__gradient {
+  opacity: 0.5;
+}
+
+.Header__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: calc(100% - 100px);
+  height: 100px;
+}
+.Header__content__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 100%;
+  max-width: 1500px;
+  height: 100px;
+  margin-left: 100px;
+}
+
+.Header__logo {
+  position: relative;
+  width: 175px;
+  height: 35px;
+  width: 196px;
+  height: 40px;
+  width: 210px;
+  height: 45px;
+  background-image: url('../../../../static/willsquad_logo_medium_light.png');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.Header[data-theme="light"] .Header__logo {
+  background-image: url('../../../../static/willsquad_logo_medium_dark_w_r.png');
+}
+.Header:not([data-theme="light"]) .Header__logo {
+  filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.25));
+}
+
+.Header__nav {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+}
+.Header__nav > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.Header__nav > ul > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  list-style-type: none;
+}
+.Header__nav > ul > li:not([data-selected="true"]):hover {
+  z-index: 1;
+}
+.Header__nav > ul > li > a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0px 35px;
+  transition: color 0.25s ease-in-out 0s,
+    background-color 0.25s ease-in-out 0s;
+}
+.Header__nav > ul > li[data-selected="true"] > a {
+  color: rgb(255, 193, 7);
+}
+.Header__nav > ul > li:not([data-selected="true"]):hover > a {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.Header[data-theme="light"] .Header__nav > ul > li > a {
+  color: rgba(0, 0, 0, 0.75);
+}
+.Header[data-theme="light"] .Header__nav > ul > li[data-selected="true"] > a {
+  color: #da3233;
+  background-color: rgba(0, 0, 0, 0.035);
+  background-color: #fff;
+}
+.Header[data-theme="light"] .Header__nav > ul > li:not([data-selected="true"]):hover > a {
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.025);
+}
+
+.Header__nav__text {
+  padding: 5px 0px;
+}
+.Header__nav > ul > li > a > .lines {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 2px;
+}
+.Header__nav > ul > li > a > .lines > .line {
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #fff;
+  transition: opacity 0.25s ease-in-out 0s;
+}
+.Header__nav > ul > li[data-selected="true"] > a > .lines > .line {
+  width: 100%;
+  background-color: rgb(255, 193, 7);
+  transition: all 0.25s ease-in-out 0s;
+}
+.Header__nav > ul > li:not([data-selected="true"]):hover > a > .lines > .line:nth-child(2) {
+  width: 100%;
+  transition: all 0.25s ease-in-out 0s;
+}
+.Header__nav > ul > li:hover > a > .lines > .line:nth-child(1),
+.Header__nav > ul > li[data-selected="true"] > a > .lines > .line:nth-child(1),
+.Header__nav > ul > li:hover > a > .lines > .line:nth-child(3),
+.Header__nav > ul > li[data-selected="true"] > a > .lines > .line:nth-child(3) {
+  width: 50%;
+  opacity: 0;
+  transition: all 0.25s ease-in-out 0.1s;
+}
+.Header__nav > ul > li:hover > a > .lines > .line:nth-child(1),
+.Header__nav > ul > li[data-selected="true"] > a > .lines > .line:nth-child(1) {
+  margin-left: -150%;
+}
+.Header__nav > ul > li:hover > a > .lines > .line:nth-child(3),
+.Header__nav > ul > li[data-selected="true"] > a > .lines > .line:nth-child(3) {
+  margin-left: 150%;
+}
+
+.Header[data-theme="light"] .Header__nav > ul > li > a > .lines > .line {
+  background-color: rgba(0, 0, 0, 1);
+}
+.Header[data-theme="light"] .Header__nav > ul > li[data-selected="true"] > a > .lines > .line {
+  background-color: #da3233;
+}

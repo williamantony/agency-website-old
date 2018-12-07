@@ -1,0 +1,25 @@
+.SectionTitle {
+  position: relative;
+  color: #b95527;
+  font-size: 42px;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Marcellus', serif;
+  font-weight: 300;
+  text-align: center;
+  text-shadow: 0px 0px 0.1px #b95527; 
+  text-transform: uppercase;
+  line-height: 36px;
+  letter-spacing: 3px;
+  word-spacing: 5px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .SectionTitle {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    margin-bottom: 20px;
+  }
+}

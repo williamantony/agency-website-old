@@ -1,0 +1,7 @@
+.LandingCover {
+  position: relative;
+  height: 100vh;
+  min-height: 500px;
+  max-height: 800px;
+  background-color: #333333;
+}

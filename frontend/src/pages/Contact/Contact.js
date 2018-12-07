@@ -1,38 +1,25 @@
 import React, { Component } from 'react';
 import './Contact.css';
-import ContactInfo from '../../components/ContactInfo/ContactInfo';
-import ContactForm from '../../components/ContactForm/ContactForm';
+import Header from '../../components/fixed/Header/Header';
+import Section from '../../components/reusable/Section/Section';
+import ContactForm from '../../components/fixed/ContactMethods/ContactForm/ContactForm';
+import SectionTitle from '../../components/reusable/SectionTitle/SectionTitle';
+import Page from '../../components/reusable/Page/Page';
 
 class Contact extends Component {
 
   render() {
     return (
-      <div className="Contact">
-        <div className="Contact__cover">
-          <div className="Contact__cover__image" />
-          <div className="Contact__cover__dark-layer" />
-        </div>
+      <Page className="Contact">
+        <Header theme="light" />
+        
 
-        <section className="Contact__page-info">
-          <div className="wrapper max-width--1500px">
-            <div className="Contact__page-info__content">
-              <h1 className="Contact__page-info__title">Contact</h1>
-            </div>
-          </div>
-        </section>
+        <Section bg="#eee">
+          <SectionTitle title="Contact" />
+          <ContactForm />
+        </Section>
 
-        <section className="Contact__info">
-          <div className="wrapper max-width--1500px">
-            <ContactInfo />
-          </div>
-        </section>
-
-        <section className="Contact__form">
-          <div className="wrapper max-width--1500px">
-            <ContactForm />
-          </div>
-        </section>
-      </div>
+      </Page>
     );
   }
 
