@@ -1,0 +1,8 @@
+.InputRow {
+  display: flex;
+  margin: 10px 0;
+}
+
+.InputRow > .Button:not(:first-child) {
+  margin-left: 10px;
+}
