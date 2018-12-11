@@ -1,0 +1,16 @@
+.RequestCallback {
+  display: flex;
+  justify-content: center;
+}
+.RequestCallback__form {
+  flex-basis: 100%;
+  max-width: 640px;
+}
+.RequestCallback__row {
+  display: flex;
+  margin: 10px 0;
+}
+
+.RequestCallback__row > .Button:not(:first-child) {
+  margin-left: 10px;
+}

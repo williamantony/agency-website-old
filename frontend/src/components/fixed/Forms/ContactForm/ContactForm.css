@@ -1,0 +1,16 @@
+.ContactForm {
+  display: flex;
+  justify-content: center;
+}
+.ContactForm__form {
+  flex-basis: 100%;
+  max-width: 640px;
+}
+.ContactForm__row {
+  display: flex;
+  margin: 10px 0;
+}
+
+.ContactForm__row > .Button:not(:first-child) {
+  margin-left: 10px;
+}

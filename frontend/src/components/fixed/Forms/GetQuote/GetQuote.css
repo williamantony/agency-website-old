@@ -1,0 +1,16 @@
+.GetQuote {
+  display: flex;
+  justify-content: center;
+}
+.GetQuote__form {
+  flex-basis: 100%;
+  max-width: 640px;
+}
+.GetQuote__row {
+  display: flex;
+  margin: 10px 0;
+}
+
+.GetQuote__row > .Button:not(:first-child) {
+  margin-left: 10px;
+}
