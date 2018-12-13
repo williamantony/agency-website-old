@@ -1,0 +1,31 @@
+.Title {
+  position: relative;
+  color: #b95527;
+  font-size: 36px;
+  font-family: 'Marcellus', serif;
+  font-weight: 700;
+  text-align: center;
+  line-height: 36px;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.Title--h1 {
+  font-size: 48px;
+}
+.Title--h2 {
+  font-size: 36px;
+}
+.Title--h3 {
+  font-size: 28px;
+}
+.Title--h4 {
+  font-size: 22px;
+}
+.Title--h5 {
+  font-size: 16px;
+}
+.Title--h6 {
+  font-size: 12px;
+}
