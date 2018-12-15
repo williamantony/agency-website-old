@@ -11,7 +11,7 @@ const LandingServicesSection = (props) => {
   } = props;
 
   return (
-    <div className={`LandingServicesSection ${align === 'right' ? `LandingServicesSection--right` : ``}`}>
+    <div className="LandingServicesSection" data-align={align}>
       <div className="LandingServicesSection__summary">
         <LandingServicesSectionSummary summary={summary} />
       </div>
@@ -24,6 +24,7 @@ const LandingServicesSection = (props) => {
               name={service.name}
               route={service.route}
               description={service.description}
+              isOffWhite={align === 'right'}
             />
           ))
         }

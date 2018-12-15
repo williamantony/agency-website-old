@@ -16,7 +16,7 @@ const LandingServicesSectionSummary = (props) => {
 
   return (
     <React.Fragment>
-      <Title tag="h2" align="left" style={titleStyle}>{ title }</Title>
+      <Title tag="h2" style={titleStyle}>{ title }</Title>
       <div className="LandingServicesSectionSummary__description">{ description }</div>
     </React.Fragment>
   );

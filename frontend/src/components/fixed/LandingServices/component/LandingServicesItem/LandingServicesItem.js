@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './LandingServicesItem.css';
-import Button from '../../../../reusable/Button/Button';
 
 const LandingServicesItem = (props) => {
   const {

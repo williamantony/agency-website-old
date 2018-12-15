@@ -1,10 +1,11 @@
 .LandingServicesSectionSummary__description {
-  max-width: 480px;
+  max-width: 640px;
   color: rgba(0, 0, 0, 1);
-  font-size: 20px;
+  font-size: 24px;
   font-family: 'Heebo', serif;
-  font-weight: 400;
-  line-height: 32px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 36px;
   letter-spacing: 0.25px;
   word-spacing: 0.25px;
   opacity: 0.75;
