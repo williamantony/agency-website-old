@@ -1,0 +1,78 @@
+.LandingServicesIntro {
+  text-align: center;
+}
+.LandingServicesIntro__title {
+  color: #1E88E5;
+  font-size: 28px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  word-spacing: 1px;
+  margin-bottom: 25px;
+}
+.LandingServicesIntro__text {
+  max-width: 900px;
+  font-size: 36px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 300;
+  line-height: 42px;
+  letter-spacing: 0.5px;
+  margin: 0px auto;
+}
+.LandingServicesIntro__text > span.desc {
+  font-size: 26px;
+  font-weight: 300;
+}
+
+.LandingServicesIntro__sections {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.LandingServicesIntro__sections__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 35%;
+  padding: 50px 0px
+}
+.LandingServicesIntro__sections__item:not(:last-child) {
+  border-right: 1px solid #dddddd;
+}
+.LandingServicesIntro__sections__item__icon {
+  width: 100px;
+  height: 100px;
+  margin-right: 15px;
+  background-position: center center;
+  background-size: 75% auto;
+  background-repeat: no-repeat;
+}
+.LandingServicesIntro__sections__item__icon--web {
+  background-image: url('./images/web-icon.png');
+}
+.LandingServicesIntro__sections__item__icon--target {
+  background-image: url('./images/target-icon.png');
+}
+.LandingServicesIntro__sections__item__text__name {
+  font-size: 20px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: 0.25px;
+  opacity: 0.75;
+}
+.LandingServicesIntro__sections__item__text__name:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.LandingServicesIntro__sections__item__text__title {
+  color: #1E88E5;
+  font-size: 18px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: 0.5px;
+  opacity: 1.0;
+  margin-bottom: 15px;
+}
