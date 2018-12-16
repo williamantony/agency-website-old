@@ -20,7 +20,7 @@ const LandingServicesDesign = (props) => {
   ];
 
   const summary = {
-    title: 'Design & Development',
+    title: 'Creative Services',
     description: `
       We are a creative website development company, passionate about helping businesses grow.
       We take pride in watching the growth of our clients.

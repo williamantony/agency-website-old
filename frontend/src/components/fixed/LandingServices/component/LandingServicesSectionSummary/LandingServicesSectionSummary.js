@@ -9,8 +9,6 @@ const LandingServicesSectionSummary = (props) => {
   } = props.summary;
 
   const titleStyle = {
-    fontSize: '32px',
-    fontWeight: '700',
     marginBottom: '20px',
   };
 

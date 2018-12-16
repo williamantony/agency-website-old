@@ -13,24 +13,61 @@ class LandingServicesIntro extends Component {
           We create internet-based solutions<br/>
           <span className="desc">to help you reach your goals in business.</span>
         </div>
+
         <div className="LandingServicesIntro__sections">
           <div className="LandingServicesIntro__sections__item">
             <div className="LandingServicesIntro__sections__item__icon LandingServicesIntro__sections__item__icon--web" />
+            {/* <div className="image image--launch"></div> */}
             <div className="LandingServicesIntro__sections__item__text">
-              <div className="LandingServicesIntro__sections__item__text__title">Setup Business</div>
-              <div className="LandingServicesIntro__sections__item__text__name">Website Development</div>
-              <div className="LandingServicesIntro__sections__item__text__name">Logo Design</div>
+              <div className="LandingServicesIntro__sections__item__text__title">Creative</div>
+              <div className="LandingServicesIntro__sections__item__text__name">
+                Make your brand stand out from your competitors using a unique identity. 
+              </div>
+            </div>
+          </div>
+          <div className="LandingServicesIntro__sections__divider">&</div>
+          <div className="LandingServicesIntro__sections__item">
+            <div className="LandingServicesIntro__sections__item__icon LandingServicesIntro__sections__item__icon--web" />
+            <div className="LandingServicesIntro__sections__item__text">
+              <div className="LandingServicesIntro__sections__item__text__title">Strategic</div>
+              <div className="LandingServicesIntro__sections__item__text__name">
+                Websites that are uniquely designed and optimized for conversion. 
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        {/* <div className="LandingServicesIntro__sections">
+          <div className="LandingServicesIntro__sections__item">
+            <div className="LandingServicesIntro__sections__item__icon LandingServicesIntro__sections__item__icon--web" />
+            <div className="LandingServicesIntro__sections__item__text">
+              <div className="LandingServicesIntro__sections__item__text__title">Branding</div>
+              <div className="LandingServicesIntro__sections__item__text__name">
+                Make your brand stand out from your competitors using a unique identity. 
+              </div>
+            </div>
+          </div>
+          <div className="LandingServicesIntro__sections__item">
+            <div className="LandingServicesIntro__sections__item__icon LandingServicesIntro__sections__item__icon--web" />
+            <div className="LandingServicesIntro__sections__item__text">
+              <div className="LandingServicesIntro__sections__item__text__title">Websites</div>
+              <div className="LandingServicesIntro__sections__item__text__name">
+                Websites that are uniquely designed and optimized for conversion. 
+              </div>
             </div>
           </div>
           <div className="LandingServicesIntro__sections__item">
             <div className="LandingServicesIntro__sections__item__icon LandingServicesIntro__sections__item__icon--target" />
             <div className="LandingServicesIntro__sections__item__text">
-              <div className="LandingServicesIntro__sections__item__text__title">Promote your business</div>
-              <div className="LandingServicesIntro__sections__item__text__name">Search Engine Optimization</div>
-              <div className="LandingServicesIntro__sections__item__text__name">Online Marketing</div>
+              <div className="LandingServicesIntro__sections__item__text__title">Search</div>
+              <div className="LandingServicesIntro__sections__item__text__name">
+                Maintains the reputation and rankings of your website or business profile. 
+              </div>
             </div>
           </div>
-        </div>
+        </div> */}
+
       </div>
     );
   }
