@@ -1,0 +1,12 @@
+.FooterSocialLinks {
+
+}
+.FooterSocialLinks__title {
+  color: #b95527;
+  font-size: 28px;
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 0.75px;
+  margin-bottom: 20px;
+}
