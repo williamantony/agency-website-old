@@ -5,9 +5,9 @@ import SocialMediaLinks from '../SocialMediaLinks/SocialMediaLinks';
 
 const FooterSocialLinks = (props) => {
   return (
-    <Section bg="#f5f5f5" padding="100px 50px 100px 50px">
+    <Section bg="#f5f5f5" padding="25px 50px 25px 50px">
       <div className="FooterSocialLinks">
-        <div className="FooterSocialLinks__title">Connect with us</div>
+        {/* <div className="FooterSocialLinks__title">Connect with us</div> */}
         <SocialMediaLinks />
       </div>
     </Section>

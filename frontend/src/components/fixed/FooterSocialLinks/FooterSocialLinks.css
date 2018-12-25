@@ -1,5 +1,6 @@
 .FooterSocialLinks {
-
+  display: flex;
+  justify-content: center;
 }
 .FooterSocialLinks__title {
   color: #b95527;
