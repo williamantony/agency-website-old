@@ -1,16 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './FooterSocialLinks.css';
-import Section from '../../reusable/Section/Section';
 import SocialMediaLinks from '../SocialMediaLinks/SocialMediaLinks';
 
 const FooterSocialLinks = (props) => {
   return (
-    <Section bg="#f5f5f5" padding="25px 50px 25px 50px">
-      <div className="FooterSocialLinks">
-        {/* <div className="FooterSocialLinks__title">Connect with us</div> */}
+    <div className="FooterSocialLinks">
+      <div className="FooterSocialLinks__wrapper">
         <SocialMediaLinks />
       </div>
-    </Section>
+    </div>
   );
 }
 
